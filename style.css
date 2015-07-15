@@ -1,0 +1,203 @@
+body {
+  font-family: Helvetica, Arial, san-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #4F4940;
+}
+
+#here {
+  font-size: 1.125em;
+  line-height: 1.4;
+}
+
+.section {
+  box-sizing: border-box;
+}
+
+.section-intro {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.6664em 0;
+  max-width: 56.8889em;
+}
+
+.heading {
+  color: #EC685B; /* pink */
+  font-size: 2.5556em;
+  line-height: 1.2;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+
+.introduction {
+  font-weight: normal;
+}
+
+.section-intro-0 {
+  background-color: #EC685B;
+  text-align: center;
+}
+.section-intro-0 .heading {
+  display: inline;
+  font-weight: bold;
+  color: white;
+}
+.section-intro-0 .introduction {
+  display: inline;
+  color: white;
+  font-style: italic;
+  font-size: 2.5556em;
+  line-height: 1.2;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+.section-intro-2 {
+  margin-bottom: 3em;
+}
+
+.section-15 {
+  background-color: #fff;
+  color: #56A6DD; /* blue */
+}
+.section-15 .heading {
+  color: #56A6DD;
+}
+
+.section-16 {
+  background-color: #F9F5BD;
+  color: #333;
+
+    -webkit-columns: 2 200px;
+     -moz-columns: 2 200px;
+          columns: 2 200px;
+  -webkit-column-gap: 3em;
+     -moz-column-gap: 3em;
+          column-gap: 3em;
+}
+
+.depth-1 {
+  float: left;
+  padding: 2.5em;
+}
+
+.depth-3 {
+  float: left;
+  width: 33.3%;
+  min-height: 22.2222em;
+  padding: 1.2em 0.6em;
+  border: 1px solid #cccccc;
+  margin: 1em;
+}
+.depth-3 .section-intro {
+  width: 100%;
+  max-width: 100%;
+}
+.depth-3 .heading {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  min-height: 2.4em;
+  font-style: italic;
+  font-size: 2.2222em;
+  line-height: 1.2;
+  text-align: left;
+}
+.depth-3:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  content: "\e91a";
+  display: block;
+  color: #EC685B;
+  font-size: 2.6em;
+}
+.section-2:before {
+  content: "\e953";
+}
+.section-3:before {
+  content: "\e972";
+}
+.section-4:before {
+  content: "\e9c9";
+}
+
+.section-5:before {
+  content: "\e9cc";
+}
+.section-6:before {
+  content: "\e920";
+}
+.section-7:before {
+  content: "\e926";
+}
+
+.section-8:before {
+  content: "\ea70";
+}
+.section-9:before {
+  content: "\e945";
+}
+.section-10:before {
+  content: "\e99b";
+}
+
+.section-11:before {
+  content: "\e957";
+}
+.section-12:before {
+  content: "\ea91";
+}
+.section-13:before {
+  content: "\e9d4";
+}
+
+.end {
+  vertical-align: baseline;;
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  overflow: hidden;
+  border-radius: 100%;
+  background-color: #333;
+  color: #fff;
+  text-indent: -9999px;
+}
+
+
+
+
+
+.edit-mode .section {
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 1em;
+  border: 1px solid black;
+}
+.edit-mode label,
+.edit-mode .label {
+  display: block;
+  margin-bottom: 1.5em;
+}
+.edit-mode input[type="text"] {
+  font-size: 1em;
+  width: 100%;
+}
+.edit-mode textarea {
+  font-size: 1em;
+  width: 100%;
+  height: 8em;
+}
