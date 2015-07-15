@@ -1,0 +1,29 @@
+# Sublime
+
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+
+
+# OSX
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+
+# SASS
+
+.sass-cache
+
+
+# Generated markup
+
+dist/
