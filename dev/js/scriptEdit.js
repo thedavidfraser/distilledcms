@@ -1,5 +1,6 @@
-
 var markupAndRenderEditMode = function(data){
+
+  'use strict';
 
   var sectionCount = 0,
       arrayDepth = 0,
@@ -38,9 +39,9 @@ var markupAndRenderEditMode = function(data){
     }
 
     if(lastItem){
-      return prefix + '<div class="label"><textarea>' + dataString + '</textarea></div>';;    
+      return prefix + '<div class="label"><textarea>' + dataString + '</textarea></div>';
     }
-    return prefix + '<div class="label"><textarea>' + dataString + '</textarea></div>';;
+    return prefix + '<div class="label"><textarea>' + dataString + '</textarea></div>';
   };
 
   var isArray = function(thing){
@@ -161,7 +162,7 @@ var markupAndRenderEditMode = function(data){
       
     });
 
-    data["content"] = content;
+    data.content = content;
 
     $('#data').val( JSON.stringify(data) );
 
@@ -189,7 +190,7 @@ var markupAndRenderEditMode = function(data){
   console.log(data.content[0] );
   render(markupArray(data.content));
 
-}
+};
 
 if(data){
   //markupAndRenderEditMode(data);

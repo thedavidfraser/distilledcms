@@ -19,7 +19,7 @@ gulp.task('sass', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('./dist/css'))
-    .pipe(notify({ message: 'SASS task complete' }));
+    .pipe(notify({ message: 'SASS task end' }));
 });
 
 
@@ -33,7 +33,7 @@ gulp.task('js', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
-    .pipe(notify({ message: 'JS task complete' }));
+    .pipe(notify({ message: 'JS task end' }));
 });
 
 
@@ -46,7 +46,7 @@ gulp.task('copyJsAssets', function() {
 
   return gulp.src(src)
     .pipe(gulp.dest('./dist/js'))
-    .pipe(notify({ message: 'Copy JS assets task complete' }));
+    .pipe(notify({ message: 'Copy JS assets task end' }));
 });
 
 // Copy HTML assets
@@ -58,7 +58,7 @@ gulp.task('copyHtmlAssets', function() {
 
   return gulp.src(src)
     .pipe(gulp.dest('./dist'))
-    .pipe(notify({ message: 'Copy HTML assets task complete' }));
+    .pipe(notify({ message: 'Copy HTML assets task end' }));
 });
 
 // Copy fonts
@@ -73,7 +73,7 @@ gulp.task('copyFontAssets', function() {
 
   return gulp.src(src)
     .pipe(gulp.dest('./dist/fonts'))
-    .pipe(notify({ message: 'Copy fonts task complete' }));
+    .pipe(notify({ message: 'Copy fonts task end' }));
 });
 
 

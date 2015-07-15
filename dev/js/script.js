@@ -1,5 +1,6 @@
-
 var markupAndRender = function(data){
+
+  'use strict';
 
   var sectionCount = 0,
       arrayDepth = 0,
@@ -115,7 +116,7 @@ var markupAndRender = function(data){
 
   render(markupArray(data.content));
 
-}
+};
 
 if(data){
   markupAndRender(data);
