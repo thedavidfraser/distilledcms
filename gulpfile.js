@@ -1,6 +1,6 @@
-'use strict';
-
 var gulp = require('gulp'),
+    del = require('del'),
+
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     minifycss = require('gulp-minify-css'),
@@ -9,6 +9,17 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify');
+
+
+// Clean
+gulp.task('clean', function(cb) {
+    del([
+      './dist/css',
+      './dist/js',
+      './dist/fonts',
+      './dist/*.html'
+    ], cb)
+});
 
 
 // SCSS
@@ -85,5 +96,7 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'sass', 'js', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets']);
+gulp.task('default', ['clean'], function(){
+  gulp.start('watch', 'sass', 'js', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets');
+});
 
