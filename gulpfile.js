@@ -1,4 +1,7 @@
 var gulp = require('gulp'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
     del = require('del'),
 
     sass = require('gulp-sass'),
@@ -34,17 +37,28 @@ gulp.task('sass', function () {
 });
 
 
-// JS
-gulp.task('js', function() {
+// JS hint
+gulp.task('jshint', function() {
   return gulp.src('./dev/js/**/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(notify({ message: 'JS task end' }));
+    .pipe(jshint.reporter('default'));
+});
+
+
+// Browserify
+gulp.task('browserify', function() {
+    return browserify('./dev/js/app.js')
+        .bundle()
+        // Pass desired output filename to vinyl-source-stream
+        .pipe(source('bundle.js'))
+        // Convert from streaming to buffered vinyl file object
+        .pipe(buffer())
+        // Start piping stream to tasks!
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'))
+        .pipe(notify({ message: 'Browserify task end' }));
 });
 
 
@@ -91,12 +105,12 @@ gulp.task('copyFontAssets', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch('./dev/scss/**/*.scss', ['sass']);
-  gulp.watch('./dev/js/**/*.js', ['js']);
+  gulp.watch('./dev/js/**/*.js', ['jshint', 'browserify']);
   gulp.watch('./dev/**/*.html', ['copyHtmlAssets']);
 });
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['clean'], function(){
-  gulp.start('watch', 'sass', 'js', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets');
+  gulp.start('watch', 'sass', 'jshint', 'browserify', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets');
 });
 

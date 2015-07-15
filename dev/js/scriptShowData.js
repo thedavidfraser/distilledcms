@@ -1,12 +1,13 @@
-var showData = function(data){
+module.exports = function(data) {
 
-	'use strict';
+	"use strict";
 
-	$('#data').val(JSON.stringify(data));
+	var showData = function(data){
+
+		$('#data').val(JSON.stringify(data));
+
+	};
+
+	return showData(data);
 
 };
-
-if(data){
-	showData(data);
-}
-
