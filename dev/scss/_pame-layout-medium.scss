@@ -1,0 +1,63 @@
+
+
+/* Main heading - red background */
+.level-0-content {
+  
+  .heading {
+    font-size: 2.5556em;
+  }
+  .introduction {
+    font-size: 2.5556em;
+  }
+}
+
+/* Tasks like */
+.level-2 {
+
+  //clearfix
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    width: 100%;
+  }
+
+  .depth-3 {
+    float: left;
+    width: 50%;
+    padding: 0 0.5em;
+
+    .level-content {
+      padding: 1.5em 3em 1.5em 1.5em;
+      height: 32em;
+    }
+    .level-content-inner {
+      &:before {
+        font-size: 2.75em;
+      }
+    }
+    .heading {
+      font-size: 2.2222em;
+    }
+  }
+}
+
+
+/* Task alt layouts */
+.level-2 .depth-3 {
+
+  &:nth-child(2),
+  &:nth-child(5),
+  &:nth-child(9),
+  &:nth-child(12) {
+
+    .level-content {
+      padding: 1.5em 3em;
+
+      p {
+        font-size: 1.3333em;
+      }
+    }
+  }
+
+}

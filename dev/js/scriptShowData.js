@@ -4,7 +4,10 @@ module.exports = function(data) {
 
 	var showData = function(data){
 
-		$('#data').val(JSON.stringify(data));
+		$el = $('<textarea>');
+		$el.attr('id', 'data');
+		$el.val(JSON.stringify(data));
+		$('body').append($el);
 
 	};
 

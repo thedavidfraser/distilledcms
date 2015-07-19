@@ -10,8 +10,8 @@ var gulp = require('gulp'),
 
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify');
+    concat = require('gulp-concat');
+//    notify = require('gulp-notify');
 
 
 // Clean
@@ -32,8 +32,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./dist/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(notify({ message: 'SASS task end' }));
+    .pipe(gulp.dest('./dist/css'));
+//    .pipe(notify({ message: 'SASS task end' }));
 });
 
 
@@ -57,8 +57,8 @@ gulp.task('browserify', function() {
         .pipe(gulp.dest('./dist/js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
-        .pipe(notify({ message: 'Browserify task end' }));
+        .pipe(gulp.dest('./dist/js'));
+//        .pipe(notify({ message: 'Browserify task end' }));
 });
 
 
@@ -70,8 +70,20 @@ gulp.task('copyJsAssets', function() {
       ];
 
   return gulp.src(src)
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(notify({ message: 'Copy JS assets task end' }));
+    .pipe(gulp.dest('./dist/js'));
+//    .pipe(notify({ message: 'Copy JS assets task end' }));
+});
+
+// Copy Image assets
+gulp.task('copyImageAssets', function() {
+
+  var src = [
+        './dev/img/*.*'
+      ];
+
+  return gulp.src(src)
+    .pipe(gulp.dest('./dist/img'));
+//    .pipe(notify({ message: 'Copy Image assets task end' }));
 });
 
 // Copy HTML assets
@@ -82,8 +94,8 @@ gulp.task('copyHtmlAssets', function() {
       ];
 
   return gulp.src(src)
-    .pipe(gulp.dest('./dist'))
-    .pipe(notify({ message: 'Copy HTML assets task end' }));
+    .pipe(gulp.dest('./dist'));
+//    .pipe(notify({ message: 'Copy HTML assets task end' }));
 });
 
 // Copy fonts
@@ -97,8 +109,8 @@ gulp.task('copyFontAssets', function() {
       ];
 
   return gulp.src(src)
-    .pipe(gulp.dest('./dist/fonts'))
-    .pipe(notify({ message: 'Copy fonts task end' }));
+    .pipe(gulp.dest('./dist/fonts'));
+//    .pipe(notify({ message: 'Copy fonts task end' }));
 });
 
 
@@ -111,6 +123,6 @@ gulp.task('watch', function() {
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['clean'], function(){
-  gulp.start('watch', 'sass', 'jshint', 'browserify', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets');
+  gulp.start('watch', 'sass', 'jshint', 'browserify', 'copyJsAssets', 'copyHtmlAssets', 'copyFontAssets', 'copyImageAssets');
 });
 

@@ -174,10 +174,10 @@ module.exports = function(data) {
 
     var render = function(output){
 
-      $('#edit').html(output);
+      $('body').html(output);
 
       //Add submit button
-      $('#edit').append('<button id="save">Update JSON</button>');
+      $('body').append('<button id="save">Update JSON</button>');
 
       $('#save').on('click', function(e){
         e.preventDefault();

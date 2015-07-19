@@ -3,7 +3,8 @@
     var getData = require('./data'),
         script = require('./script'),
         scriptEdit = require('./scriptEdit'),
-        scriptShowData = require('./scriptShowData');
+        scriptShowData = require('./scriptShowData'),
+        scriptFooter = require('./scriptFooter');
      
     var editMode = false,
         data = getData();
@@ -14,5 +15,6 @@
         scriptEdit(data);
         scriptShowData(data);
     }
+    scriptFooter();
 
 })();

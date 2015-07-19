@@ -5,7 +5,7 @@ module.exports = function() {
   return {
     "content" : [
       "PA Me",
-      "Your multi-talented pay-as-you-need personal assistant.",
+      "Your multi-talented<br>pay-as-you-need personal assistant.",
       [
         "What we offer",
 
@@ -83,7 +83,8 @@ module.exports = function() {
         "Once we’ve had a chat with you to find out about your business, how you like to work and agree on tasks and deadlines, we can start tackling your to do list right away.  It really is that simple.",
         "Your PA Me Personal Assistant will start working remotely on your projects using email, cloud services, remote networking or good old fashioned telephone calls.",
         "We charge by the hour in 15 minute increments.  We will send you a breakdown of our hours and an invoice at the end of each month or at the end a project depending on which is most appropriate.",
-        "Call or email today to find out how we can help you."
+        "Email today to find out how we can help you.",
+        "<span class=\"button-group\"><a href=\"mailto:hello@pame.uk\" class=\"button\">hello@pame.uk</a></span>"
       ],
       [
         "About PA Me",
@@ -93,8 +94,7 @@ module.exports = function() {
         "This is what inspired me to set up PA Me.  I believe everyone can benefit from having an experienced and capable PA at their right hand but I also recognise not everyone needs one all the time or is in position to recruit a new member of staff.",
         "Working remotely gives PA Me the flexibility to take on work in small or large amounts, on a regular or an ad hoc basis or help you respond to seasonal demands.  That means you can keep on top of your admin as it arises and tackle it before it becomes a headache.  In short, I want to revolutionise the way we approach admin – one to do list at a time.",
         "I enjoy building relationships with my clients and getting to know their businesses inside and out.  I love helping them achieve their goals and sharing in their successes.",
-        "Get in touch and let us get stuck into your to do list.",
-        "Emily"
+        "Get in touch and let us get stuck into your to do list."
       ]
     ]
   };
