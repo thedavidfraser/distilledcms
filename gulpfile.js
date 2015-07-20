@@ -90,8 +90,7 @@ gulp.task('copyImageAssets', function() {
 gulp.task('copyHtmlAssets', function() {
 
   var src = [
-        './dev/start.html',
-        './dev/index.html'
+        './dev/**/*.html'
       ];
 
   return gulp.src(src)

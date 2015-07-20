@@ -100,8 +100,9 @@ a {
   &:hover,
   &:focus,
   &:active {
+    color: white;
     background-color: #EC685B;
-    border-bottom: 2px solid #EC685B;
+    border-bottom: 2px solid #56A6DD;
   }
 }
 
