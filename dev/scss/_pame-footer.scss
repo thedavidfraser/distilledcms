@@ -1,15 +1,16 @@
 .footer {
-  padding: 8em 5%;
+  padding: 2em 5%;
   text-align: center;
   background-color: #4F493F;
   color: #fff;
+  border-bottom: 0.875em solid #2F291F;
 
   &:before {
     content: "";
     display: block;
     width: 80%;
-    height: 10em;
-    margin: 0 auto;
+    height: 4.5em;
+    margin: 0 auto 2em;
     background-image: url(../img/pame-alt-logo-white.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -17,8 +18,18 @@
   }
 
   h2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  a {
+    font-family: 'Open Sans', Helvetica, Arial, san-serif;
+    font-weight: 300;
+    display: inline-block;
+    margin: 0.25em;
   }
 }
