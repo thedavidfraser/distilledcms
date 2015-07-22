@@ -42,7 +42,7 @@ a {
   line-height: 1.4;
 }
 
-.siteName {
+.site-name {
   font-weight: bold;
 }
 
@@ -72,6 +72,31 @@ a {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+blockquote {
+  margin: 0;
+
+  p {
+    font-family: 'Open Sans', Helvetica, Arial, san-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .quotation-mark {
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .site-name {
+    font-weight: inherit;
+  }
+
 }
 
 //This span is a workaround

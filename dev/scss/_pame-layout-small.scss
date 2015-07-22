@@ -220,11 +220,11 @@
 /* Task alt layouts */
 .level-2 .depth-3 {
 
-  &:nth-child(2),
-  &:nth-child(5),
-  &:nth-child(9),
-  &:nth-child(12),
-  &:nth-child(13) {
+  &:nth-child(1),
+  &:nth-child(4),
+  &:nth-child(8),
+  &:nth-child(11),
+  &:nth-child(12) {
 
     .level-content {
       padding: 1em 1.75em;
@@ -237,8 +237,8 @@
     }
   }
 
-  &:nth-child(4),
-  &:nth-child(8) {
+  &:nth-child(3),
+  &:nth-child(7) {
 
     .level-content {
       background-color: #EC685B;
@@ -252,7 +252,7 @@
     }
   }
 
-  &:nth-child(13) {
+  &:nth-child(12) {
 
     .level-content {
       margin-top: 3em;
