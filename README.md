@@ -6,6 +6,6 @@ Each level's heading and optional content are grouped together as "level content
 
 ## index.html and start.html
 
-Start HTML is an "empty" HTML document which is poopulated by generated content by Distilled CMS.
+Start HTML is an "empty" HTML document which is populated by generated content by Distilled CMS.
 
 Index HTML is a static copy of the above ready for production. Currently this is produced by cut-n-paste in the browser.
