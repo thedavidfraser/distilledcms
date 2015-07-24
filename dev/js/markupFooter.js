@@ -1,3 +1,8 @@
+/**
+   * Generate a hardcoded footer for all pages
+   *
+   * @return {String}
+*/
 module.exports = function markupFooter() {
 
   "use strict";

@@ -1,12 +1,25 @@
 module.exports = {
 
-  //If li return new string else return false
+  /**
+   * If a string is a list item then return string else false
+   * A string is a list item if it starts with a hyphen
+   * Returns the original string with hyphen removed
+   *
+   * @param  {String}
+   * @return {String} {Boolean}
+  */
   listitem : function(str){
     return str.charAt(0) === "-" ? str.substring(1) : false;
   },
 
-  //If blockquote content return new string else return false
-  blockquoteParagraph : function(str){
+  /**
+   * If a string is a blockquote paragraph then return string else false
+   * A string is a blockquote paragraph if it starts with a quote "
+   * Returns the original string with additional HTML markup
+   *
+   * @param  {String}
+   * @return {String} {Boolean}
+  */  blockquoteParagraph : function(str){
 
     var element = require('./element');
 
