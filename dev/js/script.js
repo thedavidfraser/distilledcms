@@ -14,6 +14,9 @@ module.exports = function(data) {
 
       var prefix = "";
 
+      //If datasString contains site name wrap in span
+      dataString = dataString.replace(/PA Me/g, '<span class="siteName">PA Me</span>');
+
       //If first char hyphen make list item
       //TODO substring whitespace check (perhaps not required)
       if(dataString.indexOf("-") === 0){
@@ -35,13 +38,13 @@ module.exports = function(data) {
         return prefix + "<h"+(arrayDepth+1)+" class=\"heading\">" + dataString + "</h"+(arrayDepth+1)+">";
       }
 
-      //introduction paragrpah
+      //introduction paragraph
       if(i === 1 && arrayDepth === 0){
-        return prefix + "<p class=\"introduction\">" + dataString + "</strong></p>";
+        return prefix + "<p class=\"introduction\">" + dataString + "</p>";
       }
 
       if(lastItem){
-        return prefix + "<p>" + dataString + " <span class=\"end\">END</span></p>";    
+        return prefix + "<p>" + dataString + " <span class=\"end\">(end)</span></p>";    
       }
       return prefix + "<p>" + dataString + "</p>";
     };
@@ -80,10 +83,12 @@ module.exports = function(data) {
         //If first array set last item position
         setLastItemIndexArray(dataArray);
       } else {
-        output += '\t</div>'; //section-intro
+        output += '\t</div>'; // /level-content
+        output += '\t\t</div>'; // /level-content-inner
       }
-      output += '<div class="section section-'+sectionCount+' depth-'+arrayDepth+'">';
-      output += '\t<div class="section-intro section-intro-'+sectionCount+'">';
+      output += '<div class="level level-'+sectionCount+' depth-'+arrayDepth+'">';
+      output += '\t<div class="level-content level-'+sectionCount+'-content">';
+      output += '\t\t<div class="level-content-inner level-'+sectionCount+'-content-inner">';
       sectionCount++;
       for(i = 0; i < dataArray.length; i++){
 
@@ -105,14 +110,14 @@ module.exports = function(data) {
         output += "</ul>";
       }
 
-      output += '</div>';
+      output += '</div>';// /level
       return output;
     };
 
 
     var render = function(output){
 
-      $('#here').html(output);
+      $('body').append(output);
 
     };
 

@@ -1,11 +1,7 @@
-module.exports = function() {
-
-  "use strict";
-
-  return {
+module.exports = {
     "content" : [
       "PA Me",
-      "Your multi-talented pay-as-you-need personal assistant.",
+      "Your multi-talented<br>pay-as-you-need personal assistant.",
       [
         "What we offer",
 
@@ -38,7 +34,7 @@ module.exports = function() {
           [
             "Research",
             "Keep abreast of what your competitors are doing or learn about a new market.",
-            "PA Me can produce concise briefing papers that get straight to the point and tell you what you need to know.  PA ME can also monitor news, websites and newsletters and highlight important stories so you stay on top of the latest developments in your industry."
+            "PA Me can produce concise briefing papers that get straight to the point and tell you what you need to know.  PA Me can also monitor news, websites and newsletters and highlight important stories so you stay on top of the latest developments in your industry."
           ],
           [
             "Document formatting",
@@ -83,20 +79,19 @@ module.exports = function() {
         "Once we’ve had a chat with you to find out about your business, how you like to work and agree on tasks and deadlines, we can start tackling your to do list right away.  It really is that simple.",
         "Your PA Me Personal Assistant will start working remotely on your projects using email, cloud services, remote networking or good old fashioned telephone calls.",
         "We charge by the hour in 15 minute increments.  We will send you a breakdown of our hours and an invoice at the end of each month or at the end a project depending on which is most appropriate.",
-        "Call or email today to find out how we can help you."
+        "Email today to find out how we can help you.",
+        "<span class=\"button-group\"><a href=\"mailto:hello@pame.uk\" class=\"button\">hello@pame.uk</a></span>"
       ],
       [
         "About PA Me",
         "PA Me is owned and run by Emily Dover, a highly regarded and experienced PA/Executive Assistant.  Emily began her career working the House of Commons, initially in the Leader of the Opposition’s Office and later as a MP’s Research Assistant. Having provided support at Directors of Finance, HR, IT and Business Strategy she understands the needs of a wide range of professionals.",
         "Through working at a senior level in Government and the NHS as well as working as the Assistant to the Managing Director of a small, online retail company, Emily also has insight into the dynamics of both small and large organisations.",
-        "While I was working as an Executive Assistant, I realised that technology had developed to the point where it simply didn’t matter anymore whether I was two desks or two counties away from where my boss was.  I’ve also known plenty of busy professionals struggling to keep up with the demands of their role due to admin pressures.",
-        "This is what inspired me to set up PA Me.  I believe everyone can benefit from having an experienced and capable PA at their right hand but I also recognise not everyone needs one all the time or is in position to recruit a new member of staff.",
-        "Working remotely gives PA Me the flexibility to take on work in small or large amounts, on a regular or an ad hoc basis or help you respond to seasonal demands.  That means you can keep on top of your admin as it arises and tackle it before it becomes a headache.  In short, I want to revolutionise the way we approach admin – one to do list at a time.",
-        "I enjoy building relationships with my clients and getting to know their businesses inside and out.  I love helping them achieve their goals and sharing in their successes.",
-        "Get in touch and let us get stuck into your to do list.",
-        "Emily"
+        "\"While I was working as an Executive Assistant, I realised that technology had developed to the point where it simply didn’t matter anymore whether I was two desks or two counties away from where my boss was.  I’ve also known plenty of busy professionals struggling to keep up with the demands of their role due to admin pressures.",
+        "\"This is what inspired me to set up PA Me.  I believe everyone can benefit from having an experienced and capable PA at their right hand but I also recognise not everyone needs one all the time or is in position to recruit a new member of staff.",
+        "\"Working remotely gives PA Me the flexibility to take on work in small or large amounts, on a regular or an ad hoc basis or help you respond to seasonal demands.  That means you can keep on top of your admin as it arises and tackle it before it becomes a headache.  In short, I want to revolutionise the way we approach admin – one to do list at a time.",
+        "\"I enjoy building relationships with my clients and getting to know their businesses inside and out.  I love helping them achieve their goals and sharing in their successes.",
+        "\"Get in touch and let us get stuck into your to do list.",
+        "\"Emily\""
       ]
     ]
-  };
-
 };

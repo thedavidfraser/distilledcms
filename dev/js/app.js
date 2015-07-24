@@ -1,18 +1,21 @@
 (function(){
 
-    var getData = require('./data'),
-        script = require('./script'),
-        scriptEdit = require('./scriptEdit'),
-        scriptShowData = require('./scriptShowData');
+    var data = require('./data'),
+        settings = require('./settings'),
+        render = require('./render'),
+        markupArray = require('./markupArray'),
+//        scriptEdit = require('./scriptEdit'),
+//        scriptShowData = require('./scriptShowData'),
+        scriptFooter = require('./scriptFooter');
      
-    var editMode = false,
-        data = getData();
+    var editMode = false;
 
     if(!editMode){
-        script(data);
+        render( markupArray(data, settings) );
     } else {
-        scriptEdit(data);
-        scriptShowData(data);
+//        scriptEdit(data, settings);
+//        scriptShowData(data, settings);
     }
+    scriptFooter();
 
 })();

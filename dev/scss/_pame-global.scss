@@ -1,0 +1,133 @@
+
+body {
+  font-family: Helvetica, Arial, san-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #4F4940;
+}
+
+a {
+  color: #EC685B;
+  text-decoration: none;
+  border-bottom: 1px solid #EC685B;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #56A6DD;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.level,
+.level-content,
+.level-content-inner {
+  box-sizing: border-box;
+}
+
+.level {
+  padding: 5em 0 6.5em;
+}
+
+.level-content-inner {
+  width: 90%;
+  max-width: 56.8889em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.level-0 {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.site-name {
+  font-weight: bold;
+}
+
+.heading {
+  font-family: 'Open Sans', Helvetica, Arial, san-serif;
+  font-weight: 300;
+  color: #EC685B; /* pink */
+  font-size: 2em;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+
+.introduction {
+  font-weight: normal;
+}
+
+.end {
+  vertical-align: baseline;;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  overflow: hidden;
+  background-color: #EC685B; /* pink */
+  color: #fff;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+blockquote {
+  margin: 0;
+
+  p {
+    font-family: 'Open Sans', Helvetica, Arial, san-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .quotation-mark {
+    position: absolute;
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .site-name {
+    font-weight: inherit;
+  }
+
+}
+
+//This span is a workaround
+.button-group {
+  display: block;
+  padding-top: 1.4em;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0.5em 0.75em;
+  color: white;
+  font-family: 'Open Sans', Helvetica, Arial, san-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  background-color: #56A6DD; /* blue */
+  text-decoration: none;
+  border-bottom: 2px solid #EC685B;
+
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 0px 4px 0px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 0px 4px 0px 0px rgba(50, 50, 50, 0.1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: #EC685B;
+    border-bottom: 2px solid #56A6DD;
+  }
+}
+
