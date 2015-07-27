@@ -11,8 +11,8 @@ module.exports = {
         [
           "Virgin Atlantic",
           "Adaptive desktop and mobile websites for the famous airline, including fight selection and booking flow.",
-          "Best Airline website at Travelolgy Awards 2014 voted by The Sun readers",
-          "David Fraser worked on Virgin Atlantic whilst at Digitaslbi LBi",
+          "Best Airline Website at Travolution Awards 2014 voted by The Sun readers",
+          "David Fraser worked on Virgin Atlantic whilst at DigitasLBi",
           "[http://www.virgin-atlantic.com] Visit Virgin Atlantic"
         ],
         [
