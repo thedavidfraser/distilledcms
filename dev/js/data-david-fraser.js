@@ -3,15 +3,11 @@ module.exports = {
       "David Fraser",
       [
         "Lead front-end engineer",
-
         "I’m a front-end developer living in London. I've made websites for Virgin Atlantic, BlackBerry, Premier League, ATP Tennis and The Co-operative. I’m passionate about quality code and design and excited about new technologies disrupting how we use the internet.",
-
         "[mailto:hi@davidfraser.co.uk] Email hi@davidfraser.co.uk"
-
       ],
       [
         "Projects I’ve played a key role in delivering",
-
         [
           "Virgin Atlantic",
           "Adaptive desktop and mobile websites for the famous airline, including fight selection and booking flow.",
