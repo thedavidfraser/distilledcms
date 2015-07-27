@@ -1,20 +1,20 @@
-//Open Sans from www.google.com/fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600);
+//Patua One from www.google.com/fonts
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
 
-@import "fonts";
+//@import "fonts";
 
-@import "pame-footer";
-@import "pame-global";
-@import "pame-layout-small";
+@import "david-fraser-footer";
+@import "david-fraser-global";
+@import "david-fraser-layout-small";
 
-@media (min-width: 41em) {
-	@import "pame-layout-medium";
-}
-@media (min-width: 62em) {
-	@import "pame-layout-large";
-}
-@media (min-width: 83em) {
-	@import "pame-layout-xlarge";
-}
+// @media (min-width: 41em) {
+// 	@import "david-fraser-layout-medium";
+// }
+// @media (min-width: 62em) {
+// 	@import "david-fraser-layout-large";
+// }
+// @media (min-width: 83em) {
+// 	@import "david-fraser-layout-xlarge";
+// }
 
 @import "editMode";

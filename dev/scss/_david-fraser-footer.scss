@@ -1,0 +1,27 @@
+.footer {
+  padding: 2em 5%;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4.5em;
+    margin: 0 auto 2em;
+    background-image: url(../img/david-fraser-logo-circle-inverted.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  h2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
