@@ -1,5 +1,18 @@
 module.exports = {
 
+    html : '<!doctype html>\n<html>\n<head>\n{{head}}\n</head>\n<body>\n{{body}}\n</body>\n</html>',
+
+    head : {
+      charSet : '<meta charset="utf-8">',
+      ieEngineVersion : '<meta http-equiv="X-UA-Compatible" content="IE=edge">',
+      viewport : '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">',
+
+      title : '<title>{{content}}</title>',
+      description : '<meta name="description" content="{{content}}">',
+
+      stylesheet : '<link rel="stylesheet" href="css/main.min.css" media="screen">'
+    },
+
     block : {
       li : '<li>{{s}}</li>',
       heading : '<h{{n}} class="heading">{{s}}</h{{n}}>',

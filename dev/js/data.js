@@ -1,7 +1,7 @@
 module.exports = {
     "content" : [
       "PA Me",
-      "Your multi-talented<br>pay-as-you-need personal assistant.",
+      "Your multi-talented pay-as-you-need personal assistant.",
       [
         "What we offer",
 
