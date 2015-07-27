@@ -31,9 +31,14 @@ module.exports = function(i, dataString, arrayDepth, settings) {
       return getElementBlock("li", stringType.listitem(dataString));
     }
 
-    //list item
+    //blockquote paragraph
     if(stringType.blockquoteParagraph(dataString)){
       return getElementBlock("p", stringType.blockquoteParagraph(dataString));
+    }
+
+    //paragraph with CTA
+    if(stringType.paragraphWithCta(dataString)){
+      return getElementBlock("paragraphWithCta", stringType.paragraphWithCta(dataString));
     }
 
     //heading

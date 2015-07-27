@@ -1,4 +1,5 @@
 .footer {
+  font-size: 0.875em;
   padding: 2em 5%;
   text-align: center;
   background-color: #000;
@@ -23,5 +24,9 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  p {
+    font-family: 'Courier New', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }

@@ -1,9 +1,9 @@
 module.exports = function(){
 
-  var data = require('./data'),
-      settings = require('./settings'),
+  var data = require('./data-david-fraser'),
+      settings = require('./settings-david-fraser'),
       markupArray = require('./markupArray'),
-      markupFooter = require('./markupFooter'),
+      markupFooter = require('./markup-footer-david-fraser'),
       markupHead = require('./markupHead'),
       markupHtmlOutline = require('./markupHtmlOutline');
 
