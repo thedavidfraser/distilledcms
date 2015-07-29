@@ -3,7 +3,7 @@
    *
    * @return {String}
 */
-module.exports = function markupFooter() {
+module.exports = function() {
 
   "use strict";
 

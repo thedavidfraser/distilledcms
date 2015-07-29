@@ -6,7 +6,7 @@ module.exports = {
    * Returns the original string with hyphen removed
    *
    * @param  {String}
-   * @return {String} {Boolean}
+   * @return {String|Boolean}
   */
   listitem : function(str){
     return str.charAt(0) === "-" ? str.substring(1) : false;
@@ -18,7 +18,7 @@ module.exports = {
    * Returns the original string with additional HTML markup
    *
    * @param  {String}
-   * @return {String} {Boolean}
+   * @return {String|Boolean}
   */  
   blockquoteParagraph : function(str){
 

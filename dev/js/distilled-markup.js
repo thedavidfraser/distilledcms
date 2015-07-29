@@ -1,11 +1,14 @@
-module.exports = function(){
+module.exports = function(dataSrc, settingsSrc, markupFooterSrc){
 
-  var data = require('./data-david-fraser'),
-      settings = require('./settings-david-fraser'),
-      markupArray = require('./markupArray'),
-      markupFooter = require('./markup-footer-david-fraser'),
-      markupHead = require('./markupHead'),
-      markupHtmlOutline = require('./markupHtmlOutline');
+  /* Custom modules, data, settings etc */
+  var data = require(dataSrc),
+      settings = require(settingsSrc),
+      markupFooter = require(markupFooterSrc);
+
+  /* Common modules */
+  var markupArray = require('./markup-array'),
+      markupHead = require('./markup-head'),
+      markupHtmlOutline = require('./markup-html-outline');
 
   var headContent = markupHead(data, settings),
       bodyContent = markupArray(data, settings) + '\n\n' + markupFooter();

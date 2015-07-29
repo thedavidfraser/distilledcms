@@ -10,7 +10,7 @@ module.exports = {
       title : '<title>{{content}}</title>',
       description : '<meta name="description" content="{{content}}">',
 
-      stylesheet : '<link rel="stylesheet" href="css/main.min.css" media="screen">'
+      stylesheet : '<link rel="stylesheet" href="assets/css/main.min.css" media="screen">'
     },
 
     block : {

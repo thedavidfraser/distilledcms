@@ -1,4 +1,4 @@
-module.exports = function markupHtmlOutline(headContent, bodyContent){
+module.exports = function(headContent, bodyContent){
 
 	"use strict";
 

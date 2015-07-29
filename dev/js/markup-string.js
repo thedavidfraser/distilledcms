@@ -3,7 +3,7 @@ module.exports = function(i, dataString, arrayDepth, settings) {
   "use strict";
 
   var element = require('./element'),
-      stringType = require('./stringType');
+      stringType = require('./string-type');
 
   var getElementBlock = function(elName, str){
 
