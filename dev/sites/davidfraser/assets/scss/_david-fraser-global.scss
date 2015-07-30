@@ -1,0 +1,140 @@
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in iOS landscape while allowing user zoom */
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  border-bottom-color: rgba(0,0,0,0.5);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    border-bottom: 1px solid #000;
+  }
+
+  &.oianw {
+
+    &:after {
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      letter-spacing: 0;
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      -o-font-feature-settings: "liga";
+      font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    &:after {
+      content: "\e605";
+      margin-left: 0.25em;
+    }
+
+    .oianw-text {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+.level,
+.level-content,
+.level-content-inner {
+  box-sizing: border-box;
+}
+
+.level {
+  margin: 3.5em 0 3.5em;
+}
+
+.level-content-inner {
+  width: 90%;
+  max-width: 56.8889em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.level-0 {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+.site-name {
+  font-style: italic;
+}
+
+.heading {
+  font-family: 'Patua One', Helvetica, Arial, san-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+
+.introduction {
+  font-weight: normal;
+}
+
+.end {
+  vertical-align: baseline;;
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cta {
+  margin-top: 2em;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.5em 0.75em 0.6em;
+    color: white;
+    font-family: 'Patua One', Helvetica, Arial, san-serif;
+    font-weight: 400;
+    font-size: 1em;
+    background-color: #000;
+    text-decoration: none;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.25em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #333;
+    }
+  }
+}
+

@@ -1,0 +1,136 @@
+
+
+.level-0 {
+  font-size: 0.875em;
+  margin: 0 0;
+}
+
+/* Main heading - logo */
+.level-0-content {
+  padding: 1.5em 0 2em;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4em;
+    margin: 0 auto;
+    background-image: url(../img/david-fraser-logo.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .heading {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.level-0-content-inner {
+  width: 80%;
+}
+
+/* Introduction */
+.level-1 {
+  margin: 0;
+  padding: 3em 0 3.5em;
+  background-color: #000;
+  color: #fff;
+
+  .heading {
+    text-align: center;
+    &:after {
+      content: "===";
+      display: block;
+      margin: 0.5em 0;
+    }
+  }
+
+  p {
+    font-family: 'Courier New', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .cta {
+    a {
+      background-color: #fff;
+      color: #000;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #ccc;
+      }
+    }
+  }
+}
+
+/* Tasks like */
+.level-2,
+.level-7 {
+
+  //clearfix
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    width: 100%;
+  }
+
+  border-bottom: 0.25em solid #000;
+
+  .depth-2 {
+    padding: 0;
+    margin: 0;
+
+    .level-content {
+      padding: 2.5em 1em;
+      max-width: 24em;
+      margin: 0.75em auto;
+      border-top: 0.1em solid rgba(0,0,0,0.5);
+    }
+    .level-content-inner {
+      width: 100%;
+      max-width: 100%;
+    }
+    .heading {
+      text-align: center;
+      &:after {
+        content: "===";
+        display: block;
+        margin: 0.5em 0;
+      }
+    }
+    p:last-child {
+      text-align: center;
+    }
+  }
+}
+
+.level-9 {
+  padding-bottom: 1.5em;
+  margin-bottom: 0;
+  border-bottom: 0.25em solid #000;
+
+  .level-content-inner {
+    max-width: 36em;
+  }
+}
+
+.level-10 {
+  margin: 6em 0 9em;
+  background-color: #fff;
+
+  .level-content-inner {
+    text-align: center;
+  }
+}
+
+
+

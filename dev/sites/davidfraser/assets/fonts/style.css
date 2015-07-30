@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-kdm0zl');
+	src:url('fonts/icomoon.eot?#iefix-kdm0zl') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-kdm0zl') format('truetype'),
+		url('fonts/icomoon.woff?-kdm0zl') format('woff'),
+		url('fonts/icomoon.svg?-kdm0zl#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mobile:before {
+	content: "\e600";
+}
+.icon-cog:before {
+	content: "\e601";
+}
+.icon-cogs:before {
+	content: "\e602";
+}
+.icon-stats-bars2:before {
+	content: "\e603";
+}
+.icon-airplane:before {
+	content: "\e604";
+}
+.icon-new-tab:before {
+	content: "\e605";
+}
+.icon-mail2:before {
+	content: "\e606";
+}
+.icon-mail3:before {
+	content: "\e607";
+}
+.icon-mail4:before {
+	content: "\e608";
+}
+.icon-github:before {
+	content: "\e609";
+}

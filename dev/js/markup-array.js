@@ -4,9 +4,9 @@ module.exports = function(data, settings) {
 
   var utils = require('./utils'),
       element = require('./element'),
-      stringType = require('./stringType'),
-      markupString = require('./markupString'),
-      formatOutput = require('./formatOutput');
+      stringType = require('./string-type'),
+      markupString = require('./markup-string'),
+      formatOutput = require('./format-output');
 
   var levelCount = -1,
       arrayDepth = -1;

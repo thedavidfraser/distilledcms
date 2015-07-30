@@ -1,0 +1,27 @@
+/* Tasks like */
+.level-2,
+.level-7 {
+
+  .level-child-group {
+    max-width: 74em;
+    margin: 0 auto;
+
+    //clearfix
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+      width: 100%;
+    }
+  }
+
+  .depth-2 {
+    float: left;
+    width: 50%;
+    padding: 0 0.5em;
+
+    .level-content {
+      height: 30em;
+    }
+  }
+}

@@ -3,7 +3,7 @@ module.exports = function(i, dataString, arrayDepth, settings) {
   "use strict";
 
   var element = require('./element'),
-      stringType = require('./stringType');
+      stringType = require('./string-type');
 
   var getElementBlock = function(elName, str){
 
@@ -31,9 +31,14 @@ module.exports = function(i, dataString, arrayDepth, settings) {
       return getElementBlock("li", stringType.listitem(dataString));
     }
 
-    //list item
+    //blockquote paragraph
     if(stringType.blockquoteParagraph(dataString)){
       return getElementBlock("p", stringType.blockquoteParagraph(dataString));
+    }
+
+    //paragraph with CTA
+    if(stringType.paragraphWithCta(dataString)){
+      return getElementBlock("paragraphWithCta", stringType.paragraphWithCta(dataString));
     }
 
     //heading

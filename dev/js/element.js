@@ -10,20 +10,23 @@ module.exports = {
       title : '<title>{{content}}</title>',
       description : '<meta name="description" content="{{content}}">',
 
-      stylesheet : '<link rel="stylesheet" href="css/main.min.css" media="screen">'
+      stylesheet : '<link rel="stylesheet" href="assets/css/main.min.css" media="screen">'
     },
 
     block : {
       li : '<li>{{s}}</li>',
       heading : '<h{{n}} class="heading">{{s}}</h{{n}}>',
       introduction: '<p class="introduction">{{s}}</p>',
-      p : '<p>{{s}}</p>'
+      p : '<p>{{s}}</p>',
+      paragraphWithCta : '<p class="cta">{{s}}</p>'
 //Keep for future use      end : '<p>{{s}}  <span class="end">('{{lang.end}})</span></p>'
     },
 
     inline : {
       siteName : '<span class="site-name">$1</span>',
-      quotationMark : '<span class="quotation-mark">"</span>'
+      quotationMark : '<span class="quotation-mark">"</span>',
+      anchorLink : '<a href="{{href}}">{{s}}</a>',
+      anchorLinkExternal : '<a href="{{href}}" target="_blank" class="oianw">{{s}} <span class="oianw-text">(Opens in a new window)</span></a>'
     },
 
     format : {

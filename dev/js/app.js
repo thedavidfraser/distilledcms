@@ -3,10 +3,10 @@
     var data = require('./data'),
         settings = require('./settings'),
         render = require('./render'),
-        markupArray = require('./markupArray'),
+        markupArray = require('./markup-array'),
 //        scriptEdit = require('./scriptEdit'),
 //        scriptShowData = require('./scriptShowData'),
-        markupFooter = require('./markupFooter');
+        markupFooter = require('./markup-footer');
      
     var editMode = false;
 

@@ -1,3 +1,10 @@
+/* Configure build */
+var site = 'davidfraser',
+    dataRoot = './dev/sites/'+site+'/data',
+    assetsRoot = './dev/sites/'+site+'/assets';
+    destinationRoot = './dist';
+
+/* Require third-party modules */
 var gulp = require('gulp'),
     file = require('gulp-file');
     browserify = require('browserify'),
@@ -13,6 +20,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
 
+
+/* Require custom modules */
 //Distilled Markup Generator
 var distilledMarkup = require('./dev/js/distilled-markup');
     
@@ -21,22 +30,20 @@ var distilledMarkup = require('./dev/js/distilled-markup');
 // Clean
 gulp.task('clean', function(cb) {
     del([
-      './dist/css',
-      './dist/js',
-      './dist/fonts',
-      './dist/*.html'
+      destinationRoot+'/assets',
+      destinationRoot+'/*.html'
     ], cb)
 });
 
 
 // SCSS
 gulp.task('sass', function () {
-  gulp.src('./dev/scss/main.scss')
+  gulp.src(assetsRoot+'/scss/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest(destinationRoot+'/assets/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest(destinationRoot+'/assets/css'));
 });
 
 
@@ -74,18 +81,13 @@ gulp.task('copyJsAssets', function() {
       ];
 
   return gulp.src(src)
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest(destinationRoot+'/assets/js'));
 });
 
 // Copy Image assets
 gulp.task('copyImageAssets', function() {
-
-  var src = [
-        './dev/img/*.*'
-      ];
-
-  return gulp.src(src)
-    .pipe(gulp.dest('./dist/img'));
+  return gulp.src(assetsRoot+'/img/*.*')
+    .pipe(gulp.dest(destinationRoot+'/assets/img'));
 });
 
 
@@ -93,29 +95,35 @@ gulp.task('copyImageAssets', function() {
 gulp.task('copyFontAssets', function() {
 
   var src = [
-        './dev/fonts/fonts/icomoon.eot',
-        './dev/fonts/fonts/icomoon.svg',
-        './dev/fonts/fonts/icomoon.ttf',
-        './dev/fonts/fonts/icomoon.woff'
+        assetsRoot+'/fonts/fonts/icomoon.eot',
+        assetsRoot+'/fonts/fonts/icomoon.svg',
+        assetsRoot+'/fonts/fonts/icomoon.ttf',
+        assetsRoot+'/fonts/fonts/icomoon.woff'
       ];
 
   return gulp.src(src)
-    .pipe(gulp.dest('./dist/fonts'));
+    .pipe(gulp.dest('./dist/assets/fonts'));
 });
 
 
 //Create index with Distilled Markup Generator
 gulp.task('distilledMarkup', function() {
-  var str = distilledMarkup();
+  var dataRoot = '../sites/'+site+'/data',
+      dataSrc = dataRoot+'/index',
+      settingsSrc = dataRoot+'/settings',
+      markupFooterSrc = dataRoot+'/markup-footer';
+
+  var str = distilledMarkup(dataSrc, settingsSrc, markupFooterSrc);
+
   return file('index.html', str, { src: true })
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(destinationRoot));
 });
 
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch('./dev/scss/**/*.scss', ['sass']);
-  gulp.watch('./dev/js/**/*.js', ['jshint', 'distilledMarkup']);
+  gulp.watch(assetsRoot+'/scss/*.scss', ['sass']);
+  gulp.watch(['./dev/js/*.js', dataRoot+'/*.js'], ['jshint', 'distilledMarkup']);
 });
 
 // The default task (called when you run `gulp` from cli)
