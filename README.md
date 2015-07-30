@@ -13,7 +13,7 @@ Rethinking how we build websites. Looking into ways of improving content and enf
 
 ### Most CMS require expert web copy writers 
 
-Most website CMS systems including blogs and markdown README files provide the tools for symantic markup but rely on the content editor to use them correctly.
+Most website CMS systems including blogs (and markdown files) provide the tools for symantic markup but rely on the content editor to use them correctly.
 
 ### Repeating the same mistakes
 
