@@ -95,8 +95,8 @@ Level JSON example:
 The Level concept prevents the following common HTML mistakes:
 
 1. Skipping headings. Nesting `<h3>` within `<h1>` without `<h2>`.
-2. Content orphaned from it's descriptive heading because a heading. This happens when you have a sub section of content with a heading but then don't have a heading when returning to the main article.
-3. Not enough markup to style bodies of text, which in turn leads to adding markup for styling purposes and inconsistencies.
+2. Content orphaned from it's descriptive heading. This happens when you have a sub section of content with a heading but then don't have a new heading when returning to the main article.
+3. Not enough markup to style bodies of text. This leads to adding adhoc markup for styling purposes which is then inconsistent with the rest of the page or site.
 
 
 ## Lines
