@@ -128,16 +128,16 @@ In addition to Line types text within a line can be marked up with useful syntax
 
 ### Inline markup currently used
 
-* Site name - all instances of site name have a span
+* Site name - all instances of site name have a `<span>`
 
 ### Inline markup proposed
 
 * Email addresses (As links)
 * Quotations
 
-### Inline strong and emphisis
+### Inline strong and emphasis
 
-Strong and emphisis text is up for consideration but perhaps a more granular approach would be better. For example: strong is currently used for commands and warnings and emphasis is used for proper nouns and inflection. Although these would still use HTML strong and emphisis elements they should perhaps have their own Distilled markup.
+Strong and emphasis text is up for consideration but perhaps a more granular approach would be better. For example: strong is currently used for commands and warnings and emphasis is used for proper nouns and inflection. Although these would still use HTML strong and emphasis elements they should perhaps have their own Distilled markup.
 
 ## Level settings (proposed)
 
