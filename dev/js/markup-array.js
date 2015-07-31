@@ -47,7 +47,7 @@ module.exports = function(data, settings) {
           //Is next item not an unordered list 
           //Format and add unordered list to outputContent
           if( !utils.isString(nextItem) || utils.isString(nextItem) && !stringType.listitem(nextItem) ){
-            outputContent.push(element.format.ul.replace(/{{content}}/, outputContentGroup.join("")));
+            outputContent.push(element.format.ul.replace(/{{content}}/, outputContentGroup.join(element.format.levelContentPrefixInner)));
             outputContentGroup = [];
           }
 
@@ -59,7 +59,7 @@ module.exports = function(data, settings) {
           //Is next item not an unordered list 
           //Format and add unordered list to outputContent
           if( !utils.isString(nextItem) || utils.isString(nextItem) && !stringType.blockquoteParagraph(nextItem) ){
-            outputContent.push(element.format.blockquote.replace(/{{content}}/, outputContentGroup.join("")));
+            outputContent.push(element.format.blockquote.replace(/{{content}}/, outputContentGroup.join(element.format.levelContentPrefixInner)));
             outputContentGroup = [];
           }
 

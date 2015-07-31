@@ -4,6 +4,8 @@ module.exports = function(headContent, bodyContent){
 
 	var element = require('./element');
 
-  	return element.html.replace(/{{head}}/, headContent).replace(/{{body}}/, bodyContent);
+  	return element.html
+  		.replace(/{{head}}/, headContent)
+  		.replace(/{{body}}/, bodyContent);
 
 };

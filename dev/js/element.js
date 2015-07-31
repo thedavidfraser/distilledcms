@@ -1,5 +1,13 @@
 module.exports = {
 
+  /* 
+    All RegExp patters are wrapped with {{}} a la Handlebars
+    Reserved RegExp patterns
+      {{s}} : string
+      {{n}} : new line with Level indentation
+      {{n-}} | {{n---}} : new line with Level indentation and multiples of - indentation
+  */
+
     html : '<!doctype html>\n<html>\n<head>\n{{head}}\n</head>\n<body>\n{{body}}\n</body>\n</html>',
 
     head : {
@@ -7,19 +15,19 @@ module.exports = {
       ieEngineVersion : '<meta http-equiv="X-UA-Compatible" content="IE=edge">',
       viewport : '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">',
 
-      title : '<title>{{content}}</title>',
-      description : '<meta name="description" content="{{content}}">',
+      title : '<title>{{s}}</title>',
+      description : '<meta name="description" content="{{s}}">',
 
       stylesheet : '<link rel="stylesheet" href="assets/css/main.min.css" media="screen">'
     },
 
     block : {
       li : '<li>{{s}}</li>',
-      heading : '<h{{n}} class="heading">{{s}}</h{{n}}>',
-      introduction: '<p class="introduction">{{s}}</p>',
+      heading : '<h{{headingN}} class="heading">{{s}}</h{{headingN}}>',
+      introduction : '<p class="introduction">{{s}}</p>',
       p : '<p>{{s}}</p>',
       paragraphWithCta : '<p class="cta">{{s}}</p>'
-//Keep for future use      end : '<p>{{s}}  <span class="end">('{{lang.end}})</span></p>'
+//Keep for future use      end : '<p class="has-tombstone">{{s}}  <span class="tombstone">('{{lang.end}})</span></p>'
     },
 
     inline : {
@@ -30,12 +38,14 @@ module.exports = {
     },
 
     format : {
-      level : '<div class="level level-{{levelCount}} depth-{{depth}}">{{content}}</div>',
-      levelContent : '<div class="level-content level-{{levelCount}}-content">{{content}}</div>',
-      levelContentInner : '<div class="level-content-inner level-{{levelCount}}-content-inner">{{content}}</div>',
-      levelChildGroup : '<div class="level-child-group">{{content}}</div>',
-      ul : '<ul>{{content}}</ul>',
-      blockquote : '<blockquote>{{content}}</blockquote>'
+      level : '{{n}}<div class="level level-{{levelCount}} depth-{{depth}}">{{content}}{{n}}</div>',
+      levelContent : '{{n-}}<div class="level-content level-{{levelCount}}-content">{{content}}{{n-}}</div>',
+      levelContentInner : '{{n--}}<div class="level-content-inner level-{{levelCount}}-content-inner">{{content}}{{n--}}</div>',
+      levelContentPrefix : '{{n---}}',
+      levelContentPrefixInner : '{{n----}}',
+      levelChildGroup : '{{n-}}<div class="level-child-group">{{content}}{{n-}}</div>',
+      ul : '{{n---}}<ul>{{n----}}{{content}}{{n---}}</ul>',
+      blockquote : '{{n---}}<blockquote>{{ntttt}}{{content}}{{n---}}</blockquote>'
     }
 
 };

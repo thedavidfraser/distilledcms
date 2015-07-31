@@ -8,7 +8,7 @@ module.exports = function(data, settings){
 		if(!contentString){
 			return element.head[elName];
 		} else {
-			return element.head[elName].replace(/{{content}}/g, contentString);
+			return element.head[elName].replace(/{{s}}/g, contentString);
 		}
 	
 	};
