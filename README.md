@@ -202,7 +202,7 @@ My to do list:
 * Move configuration away from Gulp
 * Level settings object
 * Header, footer and navigation across multiple pages
-* Improved HTML markup indenting
+* ~~Improved HTML markup indenting~~ (Done)
 * User friendly content editor
 * Plain text Distilled markup (a third format which complements HTML and JSON)
 

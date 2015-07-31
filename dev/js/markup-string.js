@@ -44,7 +44,7 @@ module.exports = function(i, dataString, arrayDepth, settings) {
     //heading
     if(i === 0){
       output = getElementBlock("heading", dataString);
-      return output.replace(/{{n}}/g, arrayDepth+1);
+      return output.replace(/{{headingN}}/g, arrayDepth+1);
     }
 
     //introduction paragraph
