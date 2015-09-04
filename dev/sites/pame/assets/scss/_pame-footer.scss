@@ -1,16 +1,17 @@
 .footer {
-  padding: 2em 5%;
+  padding: 2.5em 5%;
   text-align: center;
   background-color: #4F493F;
   color: #fff;
   border-bottom: 0.875em solid #2F291F;
+  font-size: 0.875em;
 
   &:before {
     content: "";
     display: block;
     width: 80%;
-    height: 4.5em;
-    margin: 0 auto 2em;
+    height: 5em;
+    margin: 0 auto 2.25em;
     background-image: url(../img/pame-alt-logo-white.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -31,5 +32,10 @@
     font-weight: 300;
     display: inline-block;
     margin: 0.25em;
+  }
+
+  p {
+    font-family: 'Open Sans', Helvetica, Arial, san-serif;
+    font-weight: 300;
   }
 }
