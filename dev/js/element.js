@@ -14,11 +14,13 @@ module.exports = {
       charSet : '<meta charset="utf-8">',
       ieEngineVersion : '<meta http-equiv="X-UA-Compatible" content="IE=edge">',
       viewport : '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">',
-
       title : '<title>{{s}}</title>',
       description : '<meta name="description" content="{{s}}">',
-
-      stylesheet : '<link rel="stylesheet" href="assets/css/main.min.css" media="screen">'
+      stylesheet : '<link rel="stylesheet" href="assets/css/main.min.css" media="screen">',
+      ogTitle : '<meta property="og:title" content="{{s}}">',
+      ogDescription : '<meta property="og:description" content="{{s}}">',
+      ogSiteName : '<meta property="og:site_name" content="{{s}}">',
+      ogImage : '<meta property="og:image" content="{{s}}">'
     },
 
     block : {

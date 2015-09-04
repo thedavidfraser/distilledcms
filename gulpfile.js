@@ -1,5 +1,5 @@
 /* Configure build */
-var site = 'davidfraser',
+var site = 'pame',
     dataRoot = './dev/sites/'+site+'/data',
     assetsRoot = './dev/sites/'+site+'/assets';
     destinationRoot = './dist';
