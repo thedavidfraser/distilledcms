@@ -1,8 +1,9 @@
 /* Configure build */
 var site = 'pame',
     dataRoot = './dev/sites/'+site+'/data',
-    assetsRoot = './dev/sites/'+site+'/assets';
-    destinationRoot = './dist';
+    assetsRoot = './dev/sites/'+site+'/assets',
+    destinationRoot = './dist'
+    dataArray = ['index','about'];
 
 /* Require third-party modules */
 var gulp = require('gulp'),
@@ -108,15 +109,20 @@ gulp.task('copyFontAssets', function() {
 
 //Create index with Distilled Markup Generator
 gulp.task('distilledMarkup', function() {
-  var dataRoot = '../sites/'+site+'/data',
-      dataSrc = dataRoot+'/index',
+  var i,
+      str,
+      dataSrc,
+      dataRoot = '../sites/'+site+'/data',
       settingsSrc = dataRoot+'/settings',
       markupFooterSrc = dataRoot+'/markup-footer';
+      
+  for(i=0; i < dataArray.length; i++){
+    dataSrc = dataRoot+'/'+dataArray[i];  
+    str = distilledMarkup(dataSrc, settingsSrc, markupFooterSrc);
+    file(dataArray[i]+'.html', str, { src: true })
+      .pipe(gulp.dest(destinationRoot));
+  }
 
-  var str = distilledMarkup(dataSrc, settingsSrc, markupFooterSrc);
-
-  return file('index.html', str, { src: true })
-    .pipe(gulp.dest(destinationRoot));
 });
 
 

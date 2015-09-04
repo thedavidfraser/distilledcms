@@ -47,7 +47,7 @@ module.exports = {
       levelContentPrefixInner : '{{n----}}',
       levelChildGroup : '{{n-}}<div class="level-child-group">{{content}}{{n-}}</div>',
       ul : '{{n---}}<ul>{{n----}}{{content}}{{n---}}</ul>',
-      blockquote : '{{n---}}<blockquote>{{ntttt}}{{content}}{{n---}}</blockquote>'
+      blockquote : '{{n---}}<blockquote>{{n----}}{{content}}{{n---}}</blockquote>'
     }
 
 };
