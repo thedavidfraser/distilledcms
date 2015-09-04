@@ -42,7 +42,7 @@ module.exports = {
           ],
           [
             "Databases  and data entry",
-            "Keep existing databases up to date or us PA Me to create new database resources.  PA Me can ensure your data updates are always timely and accurate."
+            "Keep existing databases up to date or use PA Me to create new database resources.  PA Me can ensure your data updates are always timely and accurate."
           ],
           [
             "Mailings",
