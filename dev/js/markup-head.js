@@ -24,7 +24,9 @@ module.exports = function(data, settings){
             output.push( getElementHead("ogSiteName", settings.siteName) );
         }
 
-        output.push( getElementHead("ogImage", ogRequestProtocal + settings.domain + settings.avatar) );
+        if(settings.domain && settings.avatar){
+            output.push( getElementHead("ogImage", ogRequestProtocal + settings.domain + settings.avatar) );
+        }
 
         if(utils.isString(dataArray[1])){
             output.push( getElementHead("ogDescription", dataArray[1]) );
